@@ -41,7 +41,11 @@ CreateThread(function()
                                 if exports['okokNotify'] then
                                     exports['okokNotify']:Alert("", v.notifyText, v.notifyTime * 1000, v.notifyType)
                                 else
+                                    if exports['qb-core']:GetCoreObject() then
                                     QBCore.Functions.Notify(v.notifyText, v.notifyType)
+                                    else
+                                        -- Custom notify 
+                                    end
                                 end
                             end
                         end
@@ -56,7 +60,11 @@ CreateThread(function()
                                 if exports['okokNotify'] then
                                     exports['okokNotify']:Alert("", v.notifyText, v.notifyTime * 1000, v.notifyType)
                                 else
+                                    if exports['qb-core']:GetCoreObject() then
                                     QBCore.Functions.Notify(v.notifyText, v.notifyType)
+                                    else
+                                        -- Custom notify 
+                                    end
                                 end
                             end
                         end
