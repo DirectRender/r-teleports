@@ -28,7 +28,7 @@ CreateThread(function()
                 local distance = #(pos - vector3(v.coords.x, v.coords.y, v.coords.z))
 
                 if distance < v.viewDistance and distance > v.useDistance then
-                    sleep = 4
+                    sleep = 1
                     CreateText(v.coords.x, v.coords.y, v.coords.z, v.text)
                 end
                 if _ == 1 then
