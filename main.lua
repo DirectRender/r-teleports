@@ -28,12 +28,12 @@ CreateThread(function()
                 local distance = #(pos - vector3(v.coords.x, v.coords.y, v.coords.z))
 
                 if distance < v.viewDistance and distance > v.useDistance then
-                    sleep = 1
+                    sleep = 2
                     CreateText(v.coords.x, v.coords.y, v.coords.z, v.text)
                 end
                 if _ == 1 then
                     if distance < v.useDistance then
-                        sleep = 1
+                        sleep = 2
                         CreateText(v.coords.x, v.coords.y, v.coords.z,  Config.textButton..v.text)
                         if IsControlJustReleased(0, Config.pressButton) then
                             SetEntityCoords(ped, Config.textLocations[location][2].coords.x, Config.textLocations[location][2].coords.y, Config.textLocations[location][2].coords.z)
@@ -52,7 +52,7 @@ CreateThread(function()
                     end
                 elseif _ == 2 then
                     if distance < v.useDistance then
-                        sleep = 1
+                        sleep = 2
                         CreateText(v.coords.x, v.coords.y, v.coords.z,  Config.textButton..v.text)
                         if IsControlJustReleased(0, Config.pressButton) then
                             SetEntityCoords(ped, Config.textLocations[location][1].coords.x, Config.textLocations[location][1].coords.y, Config.textLocations[location][1].coords.z)
